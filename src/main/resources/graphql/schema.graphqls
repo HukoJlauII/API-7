@@ -1,0 +1,24 @@
+type Query{
+    findAllProducts:[Product]
+    findProductsByProducer(producer:String):[Product]
+}
+type Mutation{
+    createProduct(productInput:ProductInput):Product
+}
+
+type Product
+{
+    id:ID!
+    text:String!
+    qty:Int!
+    completed:Boolean!
+    producer:String!
+}
+
+input ProductInput
+{
+    text:String!
+    qty:Int!
+    completed:Boolean!
+    producer:String!
+}
